@@ -1,6 +1,7 @@
 # payment-freekassa
 
 ## Пример использования класса. new FreeKassa
+Параметр $currency необязателен, но по умолчанию будет выбран RUB.
 
 ```php
 <?php
@@ -9,8 +10,9 @@ require './Freekassa.php';
 $merchant_id = 123;
 $secret_word = 'word1';
 $secret_word2 = 'word2';
+$currency = 'RUB';
 
-$freekassa = new FreeKassa($merchant_id, $secret_word, $secret_word2);
+$freekassa = new FreeKassa($merchant_id, $secret_word, $secret_word2, $currency);
 ```
 ## Объявление суммы и идентификатора заказа. setUp
 ```php
