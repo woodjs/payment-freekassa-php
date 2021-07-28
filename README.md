@@ -1,6 +1,6 @@
 # payment-freekassa
 
-## Пример использования класса new FreeKassa
+## Пример использования класса. new FreeKassa
 
 ```php
 <?php
@@ -12,13 +12,13 @@ $secret_word2 = 'word2';
 
 $freekassa = new FreeKassa($merchant_id, $secret_word, $secret_word2);
 ```
-## Объявление суммы и идентификатора заказа setUp
+## Объявление суммы и идентификатора заказа. setUp
 ```php
 $amount = 100;
 $order_id = 1;
 $freekassa->setUp($amount, $sum);
 ```
-## Генерация цифровой подписи для оформления заказа getSignature
+## Генерация цифровой подписи для оформления заказа. getSignature
 ```php
 //...
 $amount = 100;
@@ -28,7 +28,7 @@ $freekassa->setUp($amount, $sum);
 
 $sign = $freekassa->getSignature();
 ```
-## Генерация цифровой подписи для проверки платежа getOrderSignature
+## Генерация цифровой подписи для проверки платежа. getOrderSignature
 ```php
 //...
 $amount = $_REQUEST['ANOUNT'];
@@ -41,7 +41,7 @@ $sign = $freekassa->getOrderSignature();
 if ($sign != $_REQUEST['SIGN']) die('wrong sign');
 ```
 
-## Генерация ссылки для оплаты generateUrlPayment
+## Генерация ссылки для оплаты. generateUrlPayment
 По умолчанию функция generateUrlPayment принимает в качестве параметра цифровую подпись, которая необязательная, но для тестирования может пригодится. <br>
 Пример без цифровой подписи:
 ```php
@@ -65,7 +65,7 @@ $sign = $freekassa->getSignature();
 $url = $freekassa->generateUrlPayment($sign); 
 ```
 
-## Получение информаций об объявленным переменных в классе getInfo
+## Получение информаций об объявленных переменных в классе. getInfo
 Функция возвращает JSON данные: merchantId, secretWord, desecretWord, currency, sum, orderId
 ```php
 //...
