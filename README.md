@@ -26,7 +26,7 @@ $freekassa->setUp($amount, $order_id);
 $amount = 100;
 $order_id = 1;
 
-$freekassa->setUp($amount, $sum);
+$freekassa->setUp($amount, $order_id);
 
 $sign = $freekassa->getSignature();
 ```
@@ -36,7 +36,7 @@ $sign = $freekassa->getSignature();
 $amount = $_REQUEST['ANOUNT'];
 $order_id = $_REQUEST['MERCHANT_ORDER_ID'];
 
-$freekassa->setUp($amount, $sum);
+$freekassa->setUp($amount, $order_id);
 
 $sign = $freekassa->getOrderSignature();
 
@@ -51,7 +51,7 @@ if ($sign != $_REQUEST['SIGN']) die('wrong sign');
 $amount = 100;
 $order_id = 1;
 
-$freekassa->setUp($amount, $sum);
+$freekassa->setUp($amount, $order_id);
 
 $url = $freekassa->generateUrlPayment(); 
 ```
@@ -61,7 +61,7 @@ $url = $freekassa->generateUrlPayment();
 $amount = 100;
 $order_id = 1;
 
-$freekassa->setUp($amount, $sum);
+$freekassa->setUp($amount, $order_id);
 
 $sign = $freekassa->getSignature();
 $url = $freekassa->generateUrlPayment($sign); 
