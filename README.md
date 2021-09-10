@@ -18,7 +18,7 @@ $freekassa = new FreeKassa($merchant_id, $secret_word, $secret_word2, $currency)
 ```php
 $amount = 100;
 $order_id = 1;
-$freekassa->setUp($amount, $sum);
+$freekassa->setUp($amount, $order_id);
 ```
 ## Генерация цифровой подписи для оформления заказа. getSignature
 ```php
